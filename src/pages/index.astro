@@ -2,6 +2,12 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import "../styles/global.css";
+
+const pageTitle = "Home Page Woop Woop";
+
 
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
@@ -15,15 +21,18 @@ console.log('This runs in your terminal, not the browser!');
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
-    <title>Ben's Astro Project</title>
+    <title>{pageTitle}</title>
     <meta name="description" content="This is the page description" />
   </head>
   <body>
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
-    <h1>Astro</h1>
+<Header />
+    <h1>{pageTitle}</h1>
 
   <h2>My Astro Site</h2>
+
+      <Footer />
+
+
+
   </body>
 </html>
